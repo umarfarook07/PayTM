@@ -4,7 +4,7 @@ const cors = require('cors');
 const apiRouter = require('./routers/index')
 const userRoutes = require('./routers/user')
 const accountRoutes = require('./routers/accounts')
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());

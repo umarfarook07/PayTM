@@ -28,10 +28,10 @@ const Signup = () => {
         setIsLoading(true);
 
         try {
-            const response = await axios.post('http://localhost:3000/api/v2/user/signup', {
+            const response = await axios.post('https://paytm-fgrn.onrender.com/api/v2/user/signup', {
                 firstName: firstname,
                 lastName: lastname,
-                username,
+                username,   
                 password,
             }, {
                 headers: {

@@ -95,7 +95,7 @@ export const Balance = memo(() => {
     useEffect(() => {
         setIsLoading(true);
         axios
-            .get("http://localhost:3000/api/v2/account/balance", {
+            .get("https://paytm-fgrn.onrender.com/api/v2/account/balance", {
                 headers: {
                     "Content-Type": "application/json",
                     authorization: localStorage.getItem("jwt_token"),
@@ -144,7 +144,7 @@ export const Users = () => {
         const delayDebounceFn = setTimeout(() => {
             axios
                 .get(
-                    `http://localhost:3000/api/v2/user/bulk?searchString=${searchString}`,
+                    `https://paytm-fgrn.onrender.com/api/v2/user/bulk?searchString=${searchString}`,
                     {
                         headers: {
                             "Content-Type": "application/json",
@@ -240,7 +240,7 @@ export const SendMoney = () => {
     const handleTransfer = async () => {
         try {
             const finalResponse = await axios.post(
-                "http://localhost:3000/api/v2/account/transfer",
+                "https://paytm-fgrn.onrender.com/api/v2/account/transfer",
                 {
                     to: id,
                     amount: parseInt(amount),
